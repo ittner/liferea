@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: liferea 1.10-rc4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 12:36+0200\n"
+"POT-Creation-Date: 2021-09-26 10:25-0300\n"
 "PO-Revision-Date: 2021-06-04 16:12-0300\n"
 "Last-Translator: Fúlvio Alves <fga.fulvio@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge."
@@ -955,29 +955,29 @@ msgstr "Escolher Arquivo"
 msgid "File Extension .%s"
 msgstr "Extensão de Arquivo .%s"
 
-#: ../src/ui/feed_list_view.c:432
+#: ../src/ui/feed_list_view.c:435
 msgid "Liferea is in offline mode. No update possible."
 msgstr "Liferea está em modo offline. Não é possível atualizar."
 
-#: ../src/ui/feed_list_view.c:478
+#: ../src/ui/feed_list_view.c:481
 msgid "all feeds"
 msgstr "todas as fontes de notícias"
 
-#: ../src/ui/feed_list_view.c:479
+#: ../src/ui/feed_list_view.c:482
 #, c-format
 msgid "Mark %s as read ?"
 msgstr "Marcar %s como lido?"
 
-#: ../src/ui/feed_list_view.c:483
+#: ../src/ui/feed_list_view.c:486
 #, c-format
 msgid "Are you sure you want to mark all items in %s as read ?"
 msgstr "Tem certeza de que deseja marcar todos os itens em %s como lidos?"
 
-#: ../src/ui/feed_list_view.c:621
+#: ../src/ui/feed_list_view.c:624
 msgid "(Empty)"
 msgstr "(Vazio)"
 
-#: ../src/ui/feed_list_view.c:832
+#: ../src/ui/feed_list_view.c:835
 #, c-format
 msgid ""
 "%s\n"
@@ -986,33 +986,33 @@ msgstr ""
 "%s\n"
 "<i>Recriando</i>"
 
-#: ../src/ui/feed_list_view.c:901
+#: ../src/ui/feed_list_view.c:904
 msgid "Deleting entry"
 msgstr "Apagando entrada"
 
-#: ../src/ui/feed_list_view.c:902
+#: ../src/ui/feed_list_view.c:905
 #, c-format
 msgid "Are you sure that you want to delete \"%s\" and its contents?"
 msgstr "Você realmente deseja excluir \"%s\" e seu conteúdo?"
 
-#: ../src/ui/feed_list_view.c:902
+#: ../src/ui/feed_list_view.c:905
 #, c-format
 msgid "Are you sure that you want to delete \"%s\"?"
 msgstr "Você realmente deseja excluir \"%s\"?"
 
-#: ../src/ui/feed_list_view.c:911 ../src/ui/feed_list_view.c:965
+#: ../src/ui/feed_list_view.c:914 ../src/ui/feed_list_view.c:968
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../src/ui/feed_list_view.c:912 ../src/ui/popup_menu.c:335
+#: ../src/ui/feed_list_view.c:915 ../src/ui/popup_menu.c:335
 msgid "_Delete"
 msgstr "_Excluir"
 
-#: ../src/ui/feed_list_view.c:914
+#: ../src/ui/feed_list_view.c:917
 msgid "Deletion Confirmation"
 msgstr "Confirmar Exclusão"
 
-#: ../src/ui/feed_list_view.c:953
+#: ../src/ui/feed_list_view.c:956
 #, c-format
 msgid ""
 "Are you sure that you want to add a new subscription with URL \"%s\"? "
@@ -1021,11 +1021,11 @@ msgstr ""
 "Tem certeza de que deseja adicionar uma nova assinatura com o URL \"%s\"? Já "
 "existe outra assinatura com o mesmo URL (\"%s\")."
 
-#: ../src/ui/feed_list_view.c:966
+#: ../src/ui/feed_list_view.c:969
 msgid "_Add"
 msgstr "_Adicionar"
 
-#: ../src/ui/feed_list_view.c:968
+#: ../src/ui/feed_list_view.c:971
 msgid "Adding Duplicate Subscription Confirmation"
 msgstr "Adicionando Confirmação de Assinatura Duplicada"
 
@@ -1619,6 +1619,10 @@ msgstr "Criar Recipiente de Notícias"
 #: ../glade/new_newsbin.ui.h:2
 msgid "_News Bin Name:"
 msgstr "_Nome do Recipiente de Notícias:"
+
+#: ../glade/new_newsbin.ui.h:3
+msgid "_Always show in Reduced Feed List"
+msgstr "Sempre exibir na Lista de Fontes de Notícias _Reduzida"
 
 #: ../glade/new_subscription.ui.h:2 ../glade/properties.ui.h:11
 msgid "Feed Source"
@@ -2391,11 +2395,9 @@ msgstr ""
 msgid "Search Folder:"
 msgstr "Pasta de Pesquisa:"
 
-#, c-format
 #~ msgid "\"%s\" is not available"
 #~ msgstr "\"%s\" não está disponível"
 
-#, c-format
 #~ msgid "\"%s\" updated..."
 #~ msgstr "\"%s\" atualizado..."
 
