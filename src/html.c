@@ -217,6 +217,13 @@ html_auto_discover_feed (const gchar* data, const gchar *baseUri)
 		tmp = res;
 		res = common_build_url (res, baseU);
 		g_free (tmp);
+
+		if (g_ascii_strncasecmp (tmp, "http://", 7) != 0
+		&&  g_ascii_strncasecmp (tmp, "https://", 8) != 0) {
+			debug1 (DEBUG_UPDATE, "discarding invalid URL %s", res);
+			g_free(res);
+			res = NULL;
+		}
 	}
 
 	return res;
