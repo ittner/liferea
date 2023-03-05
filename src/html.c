@@ -221,7 +221,7 @@ html_auto_discover_collect_meta (xmlNodePtr match, gpointer user_data)
 GSList *
 html_auto_discover_feed (const gchar* data, const gchar *defaultBaseUri)
 {
-	GSList		*iter, *links = NULL;
+	GSList		*iter, *links = NULL, *valid_links = NULL;
 	gchar		*baseUri = NULL;
 	xmlDocPtr	doc;
 	xmlNodePtr	node, root;
@@ -253,17 +253,26 @@ html_auto_discover_feed (const gchar* data, const gchar *defaultBaseUri)
 	/* Turn relative URIs into absolute URIs */
 	iter = links;
 	while (iter) {
-		gchar *tmp = iter->data;
-		iter->data = common_build_url (tmp, baseUri);
-		g_free (tmp);
 		debug1 (DEBUG_UPDATE, "search result: %s", (gchar *)iter->data);
+		gchar *tmp = common_build_url (iter->data, baseUri);
+		g_free (iter->data);
+		if (tmp && (g_ascii_strncasecmp (tmp, "http://", 7) == 0
+		   || g_ascii_strncasecmp (tmp, "https://", 8) == 0)) {
+			valid_links = g_slist_append (valid_links, tmp);
+		} else {
+			/* Invalid URL, discard. */
+			debug1 (DEBUG_UPDATE, "html_auto_discover_feed: discarding invalid URL %s",
+				tmp ? tmp : "NULL");
+			g_free(tmp);
+		}
 		iter = g_slist_next (iter);
 	}
+	g_slist_free (links);
 
 	g_free (baseUri);
 	xmlFreeDoc (doc);
 
-	return links;
+	return valid_links;
 }
 
 GSList *
