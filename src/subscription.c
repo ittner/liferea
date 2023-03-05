@@ -318,6 +318,7 @@ subscription_update (subscriptionPtr subscription, guint flags)
 		subscription_reset_update_counter (subscription, &now);
 
 		request = update_request_new ();
+		update_request_allow_commands (request, TRUE);
 		request->updateState = update_state_copy (subscription->updateState);
 		request->options = update_options_copy (subscription->updateOptions);
 		request->source = g_strdup (subscription_get_source (subscription));
